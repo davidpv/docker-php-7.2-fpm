@@ -19,7 +19,6 @@ RUN composer global require hirak/prestissimo
 
 RUN pecl install grpc && pecl install protobuf
 
-COPY startup.sh /
 EXPOSE 9000
 CMD ["php-fpm7.2","-F"]
 
