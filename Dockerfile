@@ -8,7 +8,7 @@ RUN ln -fs /usr/share/zoneinfo/Europe/Madrid /etc/localtime && \
     echo "Europe/Madrid" > /etc/timezone && dpkg-reconfigure -f noninteractive tzdata && \
     dpkg-reconfigure -f noninteractive tzdata
 
-RUN apt-get install -y curl unzip wget build-essential libssl-dev git jpegoptim vim libicu-dev libgd-dev iputils-ping php7.2-fpm
+RUN apt-get install -y curl telnet lsof unzip wget build-essential libssl-dev git jpegoptim vim libicu-dev libgd-dev iputils-ping php7.2-fpm
 RUN apt-get install -y php7.2-intl php7.2-dev php-pear php7.2-curl php7.2-mongodb php7.2-mbstring php7.2-bcmath php7.2-zip php7.2-xsl php7.2-imap php7.2-bz2 php7.2-mysql
 COPY www.conf /etc/php/7.2/fpm/pool.d/www.conf
 
